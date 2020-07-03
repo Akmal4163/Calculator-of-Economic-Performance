@@ -21,10 +21,10 @@ elif choices == "belanja pemerintah" :
     G = GDP - C + I + (X - M)
     print("Nilai belanja pemerintah adalah :", G)
 elif choices == "ekspor":
-    X = GDP - C + I + M
+    X = GDP - C + I - M
     print("Nilai ekspor adalah :", X)
 elif choices == "impor":
-    M = GDP - C + I + X
+    M = GDP - C + I - X
     print("Nilai impor adalah :", M)
 else :
     print("sorry, we dont have this keywords")
