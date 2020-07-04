@@ -9,22 +9,22 @@ GDP = float(input("masukkan nilai GDP : "))
 # penyelesaian data
 choices = str(input("Masukkan Rumus yang dikerjakan : "))
 if choices == "GDP":
-    GDP = C + I + G + (X - M)
-    print("The GDP is : ",GDP)
+    GDP = (C + I + G + (X - M))
+    print("The GDP is : ", GDP)
 elif choices == "konsumsi":
-    C = GDP - I + G + (X - M)
-    print("Nilai konsumsi adalah :",C)
-elif choices == "Investasi" :
-    I = GDP - C + G + (X - M)
+    C = GDP - (G + I + (X - M))
+    print("Nilai konsumsi adalah :", C)
+elif choices == "Investasi":
+    I = GDP - (G + C + (X - M))
     print("Nilai investasi adalah :", I)
-elif choices == "belanja pemerintah" :
-    G = GDP - C + I + (X - M)
+elif choices == "belanja pemerintah":
+    G = GDP - (C + I + (X - M))
     print("Nilai belanja pemerintah adalah :", G)
 elif choices == "ekspor":
-    X = GDP - C + I - M
+    X = GDP - (G + I - M)
     print("Nilai ekspor adalah :", X)
 elif choices == "impor":
-    M = GDP - C + I - X
+    M = (C + G + I + X) - GDP
     print("Nilai impor adalah :", M)
-else :
+else:
     print("sorry, we dont have this keywords")
